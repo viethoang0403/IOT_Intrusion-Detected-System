@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function toggleMotionDetection() {
+            var enabled = document.getElementById("motionToggle").checked;
+            fetch('/toggle_motion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ enabled: enabled })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Motion detection', data.enabled ? 'enabled' : 'disabled');
+                alert('Motion detection ' + (data.enabled ? 'enabled' : 'disabled'));
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        function toggleBuzzer() {
+            var enabled = document.getElementById("motionBuzzer").checked;
+            fetch('/toggle_buzzer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ enabled: enabled })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Buzzer', data.enabled ? 'enabled' : 'disabled');
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Trang chủ</h1>
+    <a href="{{ url_for('register') }}">Đăng ký khuôn mặt</a>
+    <br>
+    <div>
+        <label>Bắt đầu theo dõi: </label>
+        <input type="checkbox" id="motionToggle" onchange="toggleMotionDetection()">
+    </div>
+    <div>
+        <label>Chuông: </label>
+        <input type="checkbox" id="motionBuzzer" onchange="toggleBuzzer()">
+    </div>
+
+    <form action="{{ url_for('clear_model') }}" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn xóa tất cả dữ liệu?');">
+        <button type="submit">Clear Model</button>
+    </form>
+</body>
+</html>

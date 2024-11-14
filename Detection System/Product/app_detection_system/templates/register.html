@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký khuôn mặt</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register_style.css') }}">
+</head>
+<body>
+    <h1>Đăng ký khuôn mặt</h1>
+
+    <form method="POST" action="/register">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Chụp ảnh</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    {% if image %}
+        <h2>Ảnh đã chụp:</h2>
+        <img src="{{ url_for('static', filename='registered_faces/' + image) }}" alt="Captured Image">
+    {% endif %}
+
+    <br>
+    <div>
+        <a href="/back">Quay lại</a>
+        <a href="/save">Okay</a>
+    </div>
+
+</body>
+</html>

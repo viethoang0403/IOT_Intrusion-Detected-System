@@ -1,0 +1,91 @@
+/* Import font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Đổi font chữ sang Montserrat */
+    background-color: #f0f0f0; /* Màu nền nhẹ */
+    display: flex;
+    justify-content: center; /* Căn ngang giữa */
+    align-items: center; /* Căn dọc giữa */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    margin: 0;
+    flex-direction: column; /* Căn giữa các phần tử theo cột */
+    text-align: center;
+}
+
+h1 {
+    color: #333; /* Màu chữ của tiêu đề */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff; /* Màu nền form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các phần tử trong form */
+    width: 300px;
+}
+
+label {
+    font-size: 18px;
+    color: #555; /* Màu chữ của nhãn */
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff4500; /* Màu nền của nút */
+    color: white; /* Màu chữ của nút */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e63e00; /* Đổi màu khi hover */
+}
+
+p {
+    font-size: 16px;
+}
+
+p[style="color:red;"] {
+    color: red;
+    font-weight: bold;
+}
+
+img {
+    max-width: 50%; /* Hình ảnh sẽ chiếm tối đa chiều rộng */
+    height: auto;
+    margin-top: 20px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+    margin-top: 10px;
+    display: inline-block;
+    color: #1e90ff; /* Màu của liên kết */
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

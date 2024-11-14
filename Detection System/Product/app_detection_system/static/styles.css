@@ -1,0 +1,65 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center; /* Căn giữa theo chiều ngang */
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem; /* Kích thước chữ lớn */
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px; /* Cách trên cùng của trang một khoảng */
+    text-align: left; /* Để chữ sang trái */
+    width: 100%; /* Chiếm toàn bộ chiều rộng trang */
+    padding-left: 20px; /* Thụt vào một chút bên trái */
+}
+
+form {
+    margin-top: 20px;
+    font-size: 1.2rem; /* Tăng cỡ chữ trong form */
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.2rem; /* Tăng cỡ chữ */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-size: 1.2rem; /* Tăng cỡ chữ cho label */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Tạo khoảng cách giữa checkbox và nhãn */
+    transform: scale(1.3); /* Phóng to checkbox */
+    vertical-align: middle; /* Căn checkbox theo chiều dọc với text */
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem; /* Tăng cỡ chữ của nút */
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
